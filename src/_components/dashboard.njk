@@ -1,0 +1,10 @@
+---
+css: |
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20rem;
+    gap: 1rem;
+  }
+---
+<article class='dashboard'>{{ content | safe }}</article>
