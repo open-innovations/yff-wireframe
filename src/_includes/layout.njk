@@ -12,7 +12,9 @@
     {{ comp.nav() | safe }}
   </header>
   <main id="main" role="main">
+    {% block main %}
     {{ content | safe }}
+    {% endblock %}
   </main>
 </body>
 </html>

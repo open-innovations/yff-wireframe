@@ -1,7 +1,14 @@
 ---
 nav_order: 20
 title: Reports
+reports:
 ---
 <h1>Report Dashboard</h1>
 
-{{ comp.reports() | safe }}
+{% comp 'dashboard' %}
+  {% for page in  search.pages('report url!=false', 'sort_order') %}
+    {% comp 'pane', { link: page.data.url } %}
+      <h1>{{ page.data.title }}</h2>
+    {% endcomp %}
+  {% endfor %}
+{% endcomp %}
