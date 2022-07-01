@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import basePath from "lume/plugins/base_path.ts";
+import postcss from "lume/plugins/postcss.ts";
 
 const site = lume({
   src: './src',
@@ -7,7 +8,9 @@ const site = lume({
 });
 site.use(basePath());
 
-// Copy all css files
-site.copy([".css"]);
+// Process all css files
+site.use(postcss({
+  sourceMap: true,
+}));
 
 export default site;
