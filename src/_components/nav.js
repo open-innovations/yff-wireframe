@@ -10,7 +10,7 @@ export const css = `
 }
 `;
 
-export default function ({ comp, search }) {
+export default function ({ search }) {
   const navItems = search.pages('nav_order!=undefined', 'nav_order')
   const links = navItems.map(page => `<li><a href="${ page.data.url }">${ page.data.title }</a></li>`);
   
