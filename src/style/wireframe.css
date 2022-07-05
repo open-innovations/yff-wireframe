@@ -36,3 +36,26 @@ div {
 a {
   text-decoration: none;
 }
+
+.tag-cloud {
+  & li {
+    color: white;
+    background: black;
+  }
+}
+
+.action-bar {
+  background: black;
+  color: white;
+  & li {
+    margin: 0.2rem;
+    padding: 0.1rem 0.5rem;
+    &:hover {
+      color: black;
+      background: white;
+    }
+  }
+  & a {
+    color: inherit;
+  }
+}

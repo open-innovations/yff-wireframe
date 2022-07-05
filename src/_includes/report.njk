@@ -2,9 +2,16 @@
 
 {% block main %}
   <header>
-    <h1>TITLE: {{ title }}</h1>
+    <h1>{{ title }}</h1>
   </header>
 
-  {{ content | safe }}
+  {{ summary | md | safe }}
 
+  {{ comp['action-bar'](links) | safe }}
+
+  {% for section in sections %}
+    <h2>{{ section.title }}</h2>
+    {{ section.summary | md | safe }}
+    {{ comp['tag-cloud']({ tags: section.topics }) | safe }}
+  {% endfor %}
 {% endblock %}

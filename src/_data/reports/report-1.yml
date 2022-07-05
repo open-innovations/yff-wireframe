@@ -1,0 +1,26 @@
+title: Data Gaps
+sort_order: 10
+summary: |
+  This is a the summary of the report.
+
+  It's in **markdown** format.
+graphic: a graphic
+links:
+  report: about:blank
+
+sections:
+  - title: A first section
+    summary: Some interesting findings
+    topics:
+      - topic-1
+  - title: A second section
+    topics:
+      - topic-1
+      - topic-2
+    summary: |
+      A multi line title.
+
+      Over many lines
+
+        * A bullet list
+        * Another bullet
