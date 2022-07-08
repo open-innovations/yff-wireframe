@@ -59,3 +59,22 @@ a {
     color: inherit;
   }
 }
+
+code {
+  background-color: #ddd;
+}
+pre {
+  & code {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+.chart {
+  & .axis {
+    stroke: #888;
+    & text {
+      fill: #888;
+    }
+  }
+}
