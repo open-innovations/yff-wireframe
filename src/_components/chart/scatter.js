@@ -47,7 +47,7 @@ export default function ({
   }).join('\n');
 
   const content = `<g transform="translate(0 ${height}) scale(1 -1)" >
-      ${comp.chart.element.axis({ width, height, xLabels: axis.x?.ticks, yLabels: axis?.y?.ticks })}
+      ${comp.chart.element.axis({ width, height, xLabels: axis.x?.ticks, yLabels: axis?.y?.ticks, offset: axis?.offset })}
       ${seriesPlots}
     </g>`;
   return comp.chart.element.wrapper({ content, width, height, margin });
