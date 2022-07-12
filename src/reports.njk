@@ -8,7 +8,9 @@ title: Reports
   {% for page in search.pages('report', 'sort_order') %}
     {% comp 'pane', { link: page.data.url } %}
       <h1>{{ page.data.title }}</h2>
-      {{ page.data.summary | md | safe }}
+      <p>
+        {{ page.data.summary | md | safe | striptags  }}
+      </p>
     {% endcomp %}
   {% endfor %}
 {% endcomp %}
