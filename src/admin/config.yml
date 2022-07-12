@@ -18,8 +18,8 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       -   label: Publish Date
-          name: datetime
-          widget: date
+          name: date
+          widget: datetime
           format: YYYY-MM-DD
           date_format: D MMM YYYY
           picker_utc: true
