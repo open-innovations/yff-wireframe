@@ -18,7 +18,7 @@ site.use(resolveUrls());
 site.use(slugifyUrls());
 
 // Copy the admin directory
-site.copy("admin");
+site.copy("admin/config.yml");
 
 // Process all css files
 site.use(postcss({
