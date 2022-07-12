@@ -17,6 +17,9 @@ site.use(basePath());
 site.use(resolveUrls());
 site.use(slugifyUrls());
 
+// Copy the admin directory
+site.copy("admin");
+
 // Process all css files
 site.use(postcss({
   sourceMap: true,

@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: open-innovations/yff-wireframe
+  branch: main
+
+locale: "en-GB"
+
+publish_mode: editorial_workflow
+
+media_folder: "src/images/uploads"
+
+collections:
+  - name: report
+    label: Report
+    extension: yml
+    folder: "src/_data/reports/"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      -   label: Publish Date
+          name: datetime
+          widget: date
+          format: YYYY-MM-DD
+          date_format: D MMM YYYY
+          picker_utc: true
+      - {
+          label: Featured Image,
+          name: thumbnail,
+          widget: image,
+          required: false,
+        }
+      - { label: Summary, name: summary, widget: markdown }
+      - label: Sections
+        name: sections
+        widget: list
+        fields:
+          - name: title
+            widget: string
+          - name: summary
+            widget: markdown
+          - label: Topics
+            label_singular: Topic
+            name: topics
+            widget: list
+            field: { name: topic, widget: string }
