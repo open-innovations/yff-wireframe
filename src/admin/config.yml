@@ -5,7 +5,9 @@ backend:
 
 locale: "en-GB"
 
-publish_mode: editorial_workflow
+# Uncomment this to enable a publication workflow (based on Github PRs)
+# If left as is, will commit directly onto main
+# publish_mode: editorial_workflow
 
 media_folder: "src/images/uploads"
 
@@ -16,30 +18,40 @@ collections:
     folder: "src/_data/reports/"
     create: true
     fields:
-      - { label: Title, name: title, widget: string }
-      -   label: Publish Date
-          name: date
-          widget: datetime
-          format: YYYY-MM-DD
-          date_format: D MMM YYYY
-          picker_utc: true
-      - {
-          label: Featured Image,
-          name: thumbnail,
-          widget: image,
-          required: false,
-        }
-      - { label: Summary, name: summary, widget: markdown }
-      - label: Sections
-        name: sections
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Publication Date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: D MMM YYYY
+        picker_utc: true
+      - name: summary
+        label: Summary
+        widget: markdown
+      - name: sections
+        label: Sections
         widget: list
+        collapsed: true
+        summary: '{{fields.title}}'
         fields:
           - name: title
+            label: Section Title
             widget: string
           - name: summary
+            label: Section Summary
             widget: markdown
-          - label: Topics
-            label_singular: Topic
-            name: topics
+          - name: topics
+            label: Section Topics
+            widget: categories
+          - name: blocks
+            label: Section Blocks
             widget: list
-            field: { name: topic, widget: string }
+            summary: '{{fields.title}}'
+            fields:
+              - name: title
+                label: Block Title
+                type: string
+              - name: summary
+                type: text
