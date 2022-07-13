@@ -26,6 +26,7 @@ collections:
         widget: datetime
         format: YYYY-MM-DD
         date_format: D MMM YYYY
+        time_format: false
         picker_utc: true
       - name: summary
         label: Summary
