@@ -3,7 +3,9 @@ export const css = `
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.3rem;
+    font-size: 0.8em;
     & li {
       padding: 0.3rem 0.7rem;
       border-radius: 0.3rem;
