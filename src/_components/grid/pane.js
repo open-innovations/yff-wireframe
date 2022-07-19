@@ -3,7 +3,7 @@ export const css = `
   padding: 0.5rem;
   display: block;
   height: 100%;
-  overflow-y: scroll;
+  min-height: 20rem;
 }
 `;
 

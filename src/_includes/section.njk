@@ -1,0 +1,12 @@
+{% extends 'layout.njk' %}
+
+{% block main %}
+  <header>
+    <a href='{{ report }}'>Go back to full report</a>
+    <h1>{{ title }}</h1>
+  </header>
+
+  {{ comp['tag-cloud']({ tags: tags }) | safe }}
+
+  {{ summary | md | safe }}
+{% endblock %}

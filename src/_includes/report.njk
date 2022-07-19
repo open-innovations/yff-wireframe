@@ -7,11 +7,18 @@
 
   {{ summary | md | safe }}
 
-  {{ comp['action-bar'](links) | safe }}
+  {{ comp.actions.download({ link: report_link }) | safe }}
 
   {% for section in sections %}
-    <h2>{{ section.title }}</h2>
-    {{ section.summary | md | safe }}
-    {{ comp['tag-cloud']({ tags: section.topics }) | safe }}
+    <section id="narrative-{{ loop.index }}">
+      <h2>Narrative Point {{ loop.index }}: {{ section.title }}</h2>
+
+      {{ comp['tag-cloud']({ tags: section.tags }) | safe }}      
+
+      {{ section.summary | md | safe }}
+
+      <a href="{{ search.page("report=" + url + " index=" + loop.index0 ).data.url }}">READ MORE</a>
+    </section>
   {% endfor %}
+
 {% endblock %}

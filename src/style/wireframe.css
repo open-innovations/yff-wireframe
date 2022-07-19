@@ -5,7 +5,7 @@ html {
   font-size: 16px;
 }
 
-div {
+.pane {
   border: 1px solid black;
 }
 
@@ -44,7 +44,7 @@ a {
   }
 }
 
-.action-bar {
+.download-link {
   background: black;
   color: white;
   & li {

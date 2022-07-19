@@ -1,0 +1,68 @@
+# The title of the report
+title: Ethnic Minority Youth Employment Data Analysis
+
+# Date the report was published
+publication_date: 2022-10-01
+
+summary: |
+  Data gaps can make it difficult to understand key outcomes
+  for young people from ethnic minority backgrounds.
+
+# featured visualisation defined as per other visualisations
+# type: category-chart, heatmap, hexmap, dashboard, static-image
+visualisations:
+  - title: Short title
+    caption: Slightly longer description to be used as a caption
+    citations:
+      - title: A short description of the citation
+        link: about:blank
+    type: static-image
+    config: 
+      href: about:blank
+      # Description is used for the alt tag
+      description: Some text that describes the image
+
+# Link to download the report. Could be on this site or elsewhere.
+report_link: /downloads/example-report.pdf
+
+# Report sections
+# Per section:
+#  title - title of the section
+#  summary - a textual summary of the section
+#  tags
+# When rendering the report page render the feature block.
+# If there are more blocks available, show a read more
+sections:
+  - title: Pay disparities among ethnic groups
+    summary: |
+      A short summary for this section
+    tags:
+      - pay
+      - ethnic groups
+    blocks:
+      # All attributes optional
+      # First featured only would be shown
+      - title: ''
+        visualisations:
+          - {}
+        text: ''
+        featured_block: true
+      - title: ''
+        visualisations:
+          - {}
+        text: ''
+
+  - title: Decline in further education by young white ppl
+    summary: |
+      Summary for this section
+    tags:
+      - education
+      - white people
+
+  - title: Drop off in employment for women early (esp ethnic minorities)
+    summary: |
+      Summary for this section
+    tags:
+      - employment
+      - women
+      - ethnic minority

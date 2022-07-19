@@ -10,9 +10,23 @@ export const tags = ['report'];
  */
 
 export default function* ({ reports }) {
-  for (const report of Object.values(reports)) {
+  for (const [reportSlug, report] of Object.entries(reports)) {
+    const url = `/reports/${reportSlug}/`;
+
+    if (report.sections !== undefined ) {
+      for (const [sectionIndex, section] of Object.entries(report.sections)) {
+        yield {
+          url: `${url}${section.title}/`,
+          report: url,
+          layout: 'section.njk',
+          tags: ['section'],
+          index: sectionIndex,
+          ...section,
+        }
+      }  
+    }
     yield {
-      url: `/reports/${report.title}/`,
+      url,
       ...report,
     }
   }

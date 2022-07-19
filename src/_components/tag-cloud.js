@@ -6,7 +6,7 @@ export const css = `
     gap: 0.3rem;
     & li {
       padding: 0.3rem 0.7rem;
-      border-radius: 1rem;
+      border-radius: 0.3rem;
     }
   }
 `;
