@@ -56,3 +56,4 @@ collections:
                 type: string
               - name: summary
                 type: text
+
