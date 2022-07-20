@@ -9,4 +9,9 @@
   {{ comp['tag-cloud']({ tags: tags }) | safe }}
 
   {{ summary | md | safe }}
+
+  {% for block in blocks %}
+    {{ comp.report.block(block) | safe }}
+  {% endfor %}
+
 {% endblock %}

@@ -1,0 +1,16 @@
+<figure>
+  {{ comp.viz[type](config) | safe }}
+  <figcaption>
+    <h3>{{ title }}</h3>
+    <p>{{ caption }}</p>
+  </figcaption>
+</figure>
+{% if citations %}
+  <ul class="citations">
+    {% for citation in citations %}
+      <li>
+        <a href="{{ citation.link }}">{{ citation.title }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
+</ul>

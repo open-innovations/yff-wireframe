@@ -18,7 +18,7 @@ visualisations:
         link: about:blank
     type: static-image
     config: 
-      href: about:blank
+      link: https://dummyimage.com/600x400/777/fff.png&text=Main+Image
       # Description is used for the alt tag
       description: Some text that describes the image
 
@@ -41,16 +41,26 @@ sections:
       - ethnic groups
     blocks:
       # All attributes optional
-      # First featured only would be shown
-      - title: ''
+      # First featured only would be shown on summary page
+      - title: Section 1
         visualisations:
-          - {}
-        text: ''
+          - title: Short title
+            caption: Slightly longer description to be used as a caption
+            citations:
+              - title: A short description of the citation
+                link: about:blank
+            type: static-image
+            config: 
+              link: https://dummyimage.com/600x200/777/fff.png&text=Section+1+Image
+              # Description is used for the alt tag
+              description: Some text that describes the image
+        text: |
+          <p>Some <b>text</b> in section one</p>
         featured_block: true
-      - title: ''
-        visualisations:
-          - {}
-        text: ''
+      - title: Section 2
+        visualisations: []
+        text: |
+          Some text in section 2...
 
   - title: Decline in further education by young white ppl
     summary: |

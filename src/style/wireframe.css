@@ -5,6 +5,14 @@ html {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
 .pane {
   border: 1px solid black;
 }
@@ -31,10 +39,6 @@ html {
 #main {
   margin-top: 3rem;
   padding: 1rem;
-}
-
-a {
-  text-decoration: none;
 }
 
 .tag-cloud {

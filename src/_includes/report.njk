@@ -7,6 +7,8 @@
 
   {{ summary | md | safe }}
 
+  {{ comp.viz.main({ visualisations: visualisations }) | safe }}
+
   {{ comp.actions.download({ link: report_link }) | safe }}
 
   {% for section in sections %}

@@ -8,6 +8,6 @@ css: |
     grid-gap: 1rem;
   }
 ---
-<div class="auto-grid">
+<div class="auto-grid" {% if min_width %}style="--auto-grid-min-size: {{ min_width }};"{% endif %}>
   {{ content | safe }}
 </div>
