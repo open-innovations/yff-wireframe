@@ -31,7 +31,6 @@ export default function ({
   const yLabelPositions = yLabels.map((_, i) => i * height / (yLabels.length - 1));
   const xTickPath = xLabelPositions.reduce((a, x) => `${a} M${x} 0 l0 ${-tickSize}`, '');
   const yTickPath = yLabelPositions.reduce((a, y) => `${a} M0 ${y} l${-tickSize} 0`, '');
-  console.dir({xLabelPositions, xTickPath});
 
   let xLabelText = '';
   for (const i in xLabels) {
