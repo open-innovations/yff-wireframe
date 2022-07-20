@@ -78,3 +78,20 @@ pre {
     }
   }
 }
+
+#navigation {
+  position: relative;
+  background: white;
+  & ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    margin: 1em 0;
+    background: inherit;
+    border: 1px solid black;
+  }
+  & li {
+    width: 10em;
+  }
+}

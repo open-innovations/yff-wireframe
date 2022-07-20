@@ -1,0 +1,27 @@
+---
+# https://inclusive-components.design/menus-menu-buttons/
+css: |
+  .navigation {
+    & ul[hidden] {
+      display: none;
+    }
+  }
+js: |
+  document.addEventListener('DOMContentLoaded', () => {
+    var navButton = document.querySelector('#navigation button');
+    navButton.addEventListener('click', function() {
+      let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      let menu = this.nextElementSibling;
+      menu.hidden = !menu.hidden;
+    });
+  })
+---
+<nav id="navigation" class="navigation">
+  <button aria-expanded="false">Menu</button>
+  <ul hidden>
+    {% for link in search.pages('nav_order!=undefined', 'nav_order') -%}
+      <li><a href="{{ link.data.url }}">{{ link.data.title }}</a></li>
+    {% endfor -%}
+  </ul>
+</nav>
