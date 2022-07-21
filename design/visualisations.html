@@ -14,10 +14,13 @@
 
 		<section class="example">
 			<h2>Visualisation: iframe</h2>
-			<style>iframe { width: 100%; aspect-ratio: 16 / 9; }</style>
+			<style>
+			iframe { width: 100%; aspect-ratio: 16 / 9; }
+			cite { font-size: 0.8em; }
+			</style>
 			<script>
 			function iframeBuilder(config){
-				return '<iframe src="'+config.url+'"></iframe>';
+				return '<iframe src="'+config.url+'"></iframe><br /><cite>Source: <a href="'+config.url+'" target="_opener">'+config.url+'</a></cite>';
 			}
 			</script>
 			<pre class="yaml">
