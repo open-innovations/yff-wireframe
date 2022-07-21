@@ -51,20 +51,44 @@ sections:
                 link: about:blank
             type: static-image
             config: 
-              link: https://dummyimage.com/600x200/777/fff.png&text=Section+1+Image
+              link: https://dummyimage.com/600x200/777/fff.png&text=Section+1+Image+1
               # Description is used for the alt tag
               description: Some text that describes the image
         text: |
           <p>Some <b>text</b> in section one</p>
-        featured_block: true
       - title: Section 2
-        visualisations: []
+        visualisations:
+          - title: Short title
+            caption: Slightly longer description to be used as a caption
+            citations:
+              - title: A short description of the citation
+                link: about:blank
+            type: static-image
+            config: 
+              link: https://dummyimage.com/600x200/777/fff.png&text=Section+1+Image+2
+              # Description is used for the alt tag
+              description: Some text that describes the image
+        featured_block: true
+
         text: |
           Some text in section 2...
 
   - title: Decline in further education by young white ppl
     summary: |
       Summary for this section
+    blocks:
+      - title: Section 1
+        visualisations:
+          - title: Short title
+            caption: Slightly longer description to be used as a caption
+            citations:
+              - title: A short description of the citation
+                link: about:blank
+            type: static-image
+            config: 
+              link: https://dummyimage.com/600x200/777/fff.png&text=B2+S1+V1
+              # Description is used for the alt tag
+              description: Some text that describes the image
     tags:
       - education
       - white people
@@ -72,6 +96,19 @@ sections:
   - title: Drop off in employment for women early (esp ethnic minorities)
     summary: |
       Summary for this section
+    blocks:
+      - title: Section 1
+        visualisations:
+          - title: Short title
+            caption: Slightly longer description to be used as a caption
+            citations:
+              - title: A short description of the citation
+                link: about:blank
+            type: static-image
+            config: 
+              link: https://dummyimage.com/600x200/777/fff.png&text=B3+S1+V1
+              # Description is used for the alt tag
+              description: Some text that describes the image
     tags:
       - employment
       - women
