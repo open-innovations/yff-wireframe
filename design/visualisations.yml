@@ -27,7 +27,7 @@
       - column: "column heading to merge identical rows for"
       - column: "another column heading to merge identical rows for"
     heatmap:
-      - column: "column heading to make a heat map for":
+      - column: "column heading to make a heat map for"
         scale: Viridis8 # a named colour scale (we can have a default)
         min: 0	# optional explicit minimum
         max: 100 # optional explicit maximum
@@ -67,11 +67,11 @@
 - type: linechart
   config:
     data: file.csv   # A basic CSV file with each series in a column
-    - key:
+    key:
       show: true     # Default to false
-      position: "top left"  # Default to "top right"
-    - axes: # Define the axes
-      - horizontal:  # Horizontal axis
+      position: "top right"
+    axes:
+      horizontal:  # Horizontal axis
         min: 2010    # A minimum value
         max: 2020    # A maximum value
         # Explicitly define the ticks.
@@ -83,7 +83,7 @@
             label: ""
           - value: 2020
             label: "2020"
-      - vertical:    # The vertical axes
+      vertical:    # The vertical axes
         min: 0       # A minimum value
         max: 100     # A maximum value
         # Explicitly define the ticks.
@@ -93,7 +93,7 @@
             label: "0%"
           - value: 100
             label: "100%"
-    - series:
+    series:
       - title: Title of first series    # Displayed in the key and tooltip
         x: Time
         y: "16-17"
@@ -107,10 +107,10 @@
 
 - type: categorychart
   config:
-    - data: file.csv
+    data: file.csv
     # Define the axis
-    - axes:
-      - horizontal:
+    axes:
+      horizontal:
         min: 30
         max: 68
         ticks:
@@ -123,8 +123,8 @@
           - value: 60
             label: "60%"
     # Category names come from 
-    - category: "Ethnic group"
-    - series:
+    category: "Ethnic group"
+    series:
       - title: "Male"
         value: column-heading-for-category-male
         errors: [col-1,col-2]   # The column headings to use for the lower/upper error bar (value-lower and value+upper)
