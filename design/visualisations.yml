@@ -64,7 +64,7 @@
     column-footnote: column-heading-for-footnote    # optional column that appears below the number
     # Question: do we need to set colours per panel or can we be consistent like https://open-innovations.github.io/leeds-digital-festival-data/ ?
 
-- type: linechart
+- type: line-chart
   config:
     data: file.csv   # A basic CSV file with each series in a column
     key:
@@ -105,7 +105,7 @@
         label: column-heading-label2    # If not given we can build a label of the form "title\nx: y"
         colour: "#fab123"               # The hex colour code to use for this series (we can have defaults)
 
-- type: categorychart
+- type: category-chart
   config:
     data: file.csv
     # Define the axis
