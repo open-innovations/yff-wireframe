@@ -23,14 +23,14 @@
 - type: table
   config:
     data: file.csv	# A simple table in a CSV file with one header row
-    mergerows:  # The ability to merge rows (in a specific column) that have the same value
-      - column: "column heading to merge identical rows for"
-      - column: "another column heading to merge identical rows for"
-    heatmap:
-      - column: "column heading to make a heat map for"
-        scale: Viridis8 # a named colour scale (we can have a default)
-        min: 0	# optional explicit minimum
-        max: 100 # optional explicit maximum
+    columns:
+      - name: "column heading name"
+        mergerows: true    # The ability to merge rows (in a specific column) that have the same value
+      - name: "column heading 2"
+        heatmap: true
+        scale: Viridis
+        min: 0
+        max: 100
 
 - type: hexmap
   config:
@@ -39,7 +39,7 @@
     column-id: column-heading-for-id
     column-value: column-heading-for-value
     column-label: column-heading-for-label  # If not given we can build a label of the form "column-heading-for-id: column-heading-for-value"
-    scale: Viridis8 # a named colour scale (we can have a default)
+    scale: Viridis # a named colour scale (we can have a default)
     min: 0	# optional explicit minimum for scale
     max: 100 # optional explicit maximum for scale
 
@@ -50,7 +50,7 @@
     column-id: column-heading-for-id
     column-value: column-heading-for-value
     column-label: column-heading-for-label  # If not given we can build a label of the form "column-heading-for-id: column-heading-for-value"
-    scale: Viridis8 # a named colour scale (we can have a default)
+    scale: Viridis # a named colour scale (we can have a default)
     min: 0	# optional explicit minimum for scale
     max: 100 # optional explicit maximum for scale
 
