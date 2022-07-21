@@ -5,6 +5,12 @@ html {
   font-size: 16px;
 }
 
+.wrapper {
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -13,28 +19,32 @@ img {
   width: 100%;
 }
 
-.pane {
-  border: 1px solid black;
+.pane, section, main header, aside {
+  border: 1px dashed black;
+  margin: 1em 0;
+  padding: 1em;
 }
 
 .site-header {
-  display: flex;
   position: fixed;
   background: white;
   left: 0;
   right: 0;
   top: 0;
   border-bottom: 1px solid black;
+}
+
+.site-header-content {
+  display: flex;
   padding: 0.5rem 1rem;
+  & > *:first-child {
+    flex-grow: 1;
+  }  
+  & h1 {
+    font-size: 1.2rem;
+  }
 }
 
-.site-header > *:first-child {
-  flex-grow: 1;
-}
-
-.site-header h1 {
-  font-size: 1.2rem;
-}
 
 #main {
   margin-top: 3rem;

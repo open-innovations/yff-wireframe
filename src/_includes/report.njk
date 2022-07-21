@@ -5,18 +5,25 @@
     <h1>{{ title }}</h1>
   </header>
 
-  {{ summary | md | safe }}
+  <section>
+    {{ summary | md | safe }}
+  </section>
 
+  <section style="display: flex;">
+    {{ comp.actions.download({ link: report_link }) | safe }}
+  </section>
+
+  <section>
   {{ comp.viz.main({ visualisations: visualisations }) | safe }}
+  </section>
 
-  {{ comp.actions.download({ link: report_link }) | safe }}
 
   {% for section in sections %}
     <section id="narrative-{{ loop.index }}">
       <h2>Narrative Point {{ loop.index }}: {{ section.title }}</h2>
 
       {{ comp['tag-cloud']({ tags: section.tags }) | safe }}      
-
+    
       {{ section.summary | md | safe }}
 
       <a href="{{ search.page("report=" + url + " index=" + loop.index0 ).data.url }}">READ MORE</a>

@@ -6,9 +6,13 @@
     <h1>{{ title }}</h1>
   </header>
 
+  <aside>
   {{ comp['tag-cloud']({ tags: tags }) | safe }}
+  </aside>
 
+  <section>
   {{ summary | md | safe }}
+  </section>
 
   {% for block in blocks %}
     {{ comp.report.block(block) | safe }}

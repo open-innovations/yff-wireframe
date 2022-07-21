@@ -11,10 +11,12 @@
 </head>
 <body>
   <header id="site-header" class="site-header">
-    <a href='/'><h1>YFF Data</h1></a>
-    {{ comp.nav() | safe }}
+    <div class="site-header-content wrapper">
+      <a href='/'><h1>YFF Data</h1></a>
+      {{ comp.nav() | safe }}
+    </div>
   </header>
-  <main id="main" role="main">
+  <main id="main" role="main" class="wrapper">
     {% block main %}
     {{ content | safe }}
     {% endblock %}
