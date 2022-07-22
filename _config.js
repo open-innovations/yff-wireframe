@@ -5,6 +5,7 @@ import netlifyCMS from "lume/plugins/netlify_cms.ts";
 import postcss from "lume/plugins/postcss.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
+import { copy } from "std/fs/copy.ts";
 import csvLoader from '/oi/csv-loader.ts';
 
 const site = lume({
@@ -29,5 +30,17 @@ site.use(postcss({
 
 // Add csv loader
 site.loadData([".csv"], csvLoader);
+
+// Copy source data files to live site
+site.script("copy-data-files", () => {
+  copy("src/data/", "src/_data/sources", {
+    overwrite: true,
+  });
+});
+
+// Execute it before the site is built
+site.addEventListener("beforeBuild", "copy-data-files");
+
+site.copy('data', 'data');
 
 export default site;
