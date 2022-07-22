@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Chart Page</title>
+  <link rel="stylesheet" href="/yff-wireframe/components.css">
+  <link rel="stylesheet" href="/yff-wireframe/style/wireframe.css">
+  <script src="/yff-wireframe/components.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header">
+    <div class="site-header-content wrapper">
+      <a href="/yff-wireframe/"><h1>YFF Data</h1></a>
+      <nav id="navigation" class="navigation">
+  <button aria-expanded="false">Menu</button>
+  <ul hidden="">
+    <li><a href="/yff-wireframe/impact/">Impact</a></li>
+    <li><a href="/yff-wireframe/reports/">Reports</a></li>
+    <li><a href="/yff-wireframe/data-sources/">Data Sources</a></li>
+    </ul>
+</nav>
+
+    </div>
+  </header>
+  <main id="main" role="main" class="wrapper">
+    
+    <h2>Example chart</h2>
+<p>This is a sample of the <code>chart.scatter</code> component</p>
+<p><svg id="cee10b60-d018-4206-beb4-23f279b1fd45" class="chart" viewbox="-40 -40 480 280" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0 200) scale(1 -1)">
+<g class="axis">
+<g class="x-axis">
+<line x1="0" y1="-10" x2="400" y2="-10"></line>
+<path transform="translate(0 -10)" d=" M0 0 l0 -5 M100 0 l0 -5 M200 0 l0 -5 M300 0 l0 -5 M400 0 l0 -5"></path>
+<g transform="scale(1 -1) translate(0 20)"><text x="0" y="0">0</text><text x="100" y="0">2.5</text><text x="200" y="0">5</text><text x="300" y="0">7.5</text><text x="400" y="0">10</text></g>
+</g>
+<g class="y-axis">
+<line x1="-10" y1="0" x2="-10" y2="200"></line>
+<path transform="translate(-10 0)" d=" M0 0 l-5 0 M0 100 l-5 0 M0 200 l-5 0"></path>
+<g transform="scale(1 -1) translate(-20 0)"><text x="0" y="0">0</text><text x="0" y="-100">5</text><text x="0" y="-200">10</text></g>
+</g>
+</g>
+<g class="series" id="series1">
+<circle id="point" style="fill: red" cx="40" cy="20" r="3"></circle><circle id="point" style="fill: red" cx="120" cy="60" r="3"></circle><circle id="point" style="fill: red" cx="200" cy="100" r="3"></circle><circle id="point" style="fill: red" cx="280" cy="140" r="3"></circle><circle id="point" style="fill: red" cx="360" cy="180" r="3"></circle>
+</g>
+<g class="series" id="series2">
+<path class="line" style="stroke: blue" d="M40 180 L80 80 L200 40 L280 60 L360 20"></path><circle id="point" style="fill: blue" cx="40" cy="180" r="3"></circle><circle id="point" style="fill: blue" cx="80" cy="80" r="3"></circle><circle id="point" style="fill: blue" cx="200" cy="40" r="3"></circle><circle id="point" style="fill: blue" cx="280" cy="60" r="3"></circle><circle id="point" style="fill: blue" cx="360" cy="20" r="3"></circle>
+</g>
+</g>
+</svg></p>
+<p>Provided with options</p>
+<pre><code>{
+  "width": "100%",
+  "series": [
+    {
+      "name": "series1",
+      "points": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "line": false,
+      "colour": "red"
+    },
+    {
+      "name": "series2",
+      "points": [
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "colour": "blue"
+    }
+  ],
+  "axis": {
+    "x": {
+      "max": 10,
+      "min": 0,
+      "ticks": [
+        0,
+        2.5,
+        5,
+        7.5,
+        10
+      ]
+    },
+    "y": {
+      "min": 0,
+      "max": 10,
+      "ticks": [
+        0,
+        5,
+        10
+      ]
+    }
+  }
+}
+</code></pre>
+
+    
+  </main>
+
+</body></html>
